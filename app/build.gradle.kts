@@ -11,8 +11,8 @@ android {
         applicationId = "com.eyeplus.recon"
         minSdk = 24
         targetSdk = 34
-        versionCode = 3
-        versionName = "1.0.2-crashlog"
+        versionCode = 4
+        versionName = "1.0.3-fix-switch"
     }
 
     buildTypes {

@@ -58,15 +58,19 @@
                     </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
 
-                <com.google.android.material.materialswitch.MaterialSwitch
+                <com.google.android.material.switchmaterial.SwitchMaterial
                     android:id="@+id/swCgi"
                     android:layout_width="match_parent" android:layout_height="wrap_content"
                     android:text="Skryta CGI (doporuceno)"
-                    android:checked="true"/>
-                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:checked="true"
+                    android:textOn="ON" android:textOff="OFF"
+                    app:showText="false"/>
+                <com.google.android.material.switchmaterial.SwitchMaterial
                     android:id="@+id/swSniff"
                     android:layout_width="match_parent" android:layout_height="wrap_content"
-                    android:text="Traffic capture (Shizuku/root)"/>
+                    android:text="Traffic capture (Shizuku/root)"
+                    android:textOn="ON" android:textOff="OFF"
+                    app:showText="false"/>
 
                 <LinearLayout
                     android:layout_width="match_parent" android:layout_height="wrap_content"

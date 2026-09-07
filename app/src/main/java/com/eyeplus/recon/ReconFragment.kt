@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import android.widget.ProgressBar
 import com.google.android.material.button.MaterialButton
-import com.google.android.material.materialswitch.MaterialSwitch
+import com.google.android.material.switchmaterial.SwitchMaterial
 import com.google.android.material.textfield.TextInputEditText
 import kotlinx.coroutines.launch
 
@@ -25,8 +25,8 @@ class ReconFragment : Fragment() {
     private lateinit var etIp: TextInputEditText
     private lateinit var etUser: TextInputEditText
     private lateinit var etPass: TextInputEditText
-    private lateinit var swCgi: MaterialSwitch
-    private lateinit var swSniff: MaterialSwitch
+    private lateinit var swCgi: SwitchMaterial
+    private lateinit var swSniff: SwitchMaterial
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         return inflater.inflate(R.layout.fragment_recon, container, false)
