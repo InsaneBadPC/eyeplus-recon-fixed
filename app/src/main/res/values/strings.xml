@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EyePlus Recon</string>
+    <string name="title_recon">Rekognoskace</string>
+    <string name="title_ptz">PTZ ovládání</string>
+    <string name="title_stream">Stream přehrávač</string>
+    <string name="title_settings">Nastavení</string>
+    <string name="title_hidden">Skrytá nastavení</string>
+    <string name="title_traffic">Traffic capture</string>
+    <string name="title_results">Výsledky</string>
+    <string name="action_scan">Spustit scan</string>
+    <string name="action_stop">Stop</string>
+    <string name="action_play">Prehrat</string>
+    <string name="action_pause">Pauza</string>
+    <string name="action_export">Export JSON</string>
+    <string name="action_clear">Vycistit</string>
+    <string name="hint_ip">IP adresa kamery</string>
+    <string name="hint_user">Uzivatel</string>
+    <string name="hint_pass">Heslo</string>
+    <string name="status_idle">Pripraven</string>
+    <string name="status_scanning">Skenuji sit</string>
+    <string name="status_found">Nalezena kamera</string>
+    <string name="status_not_found">Kamera nenalezena</string>
+    <string name="status_complete">Hotovo</string>
+    <string name="status_error">Chyba</string>
+</resources>

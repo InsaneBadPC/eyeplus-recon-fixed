@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="top">
+
+        <!-- Info panel -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp" app:cardElevation="2dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="PTZ Ovládání kamery" android:textStyle="bold" android:textSize="16sp"/>
+                <TextView android:id="@+id/tvPtzIp" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="IP: --" android:textSize="13sp" android:layout_marginTop="4dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Presety -->
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="8dp">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPreset1" android:layout_width="0dp"
+                android:layout_weight="1" android:layout_height="wrap_content"
+                android:text="Preset 1" style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPreset2" android:layout_width="0dp"
+                android:layout_weight="1" android:layout_height="wrap_content"
+                android:text="Preset 2" style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPreset3" android:layout_width="0dp"
+                android:layout_weight="1" android:layout_height="wrap_content"
+                android:text="Preset 3" style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnStop" android:layout_width="0dp"
+                android:layout_weight="1" android:layout_height="wrap_content"
+                android:text="STOP" app:backgroundTint="#F44336"/>
+        </LinearLayout>
+
+        <!-- Status -->
+        <TextView android:id="@+id/tvPtzStatus" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="Pripraven"
+            android:layout_marginBottom="8dp"/>
+    </LinearLayout>
+
+    <!-- D-pad joystick -->
+    <GridLayout
+        android:layout_width="280dp" android:layout_height="280dp"
+        android:layout_gravity="center"
+        android:rowCount="3" android:columnCount="3"
+        android:useDefaultMargins="true">
+
+        <!-- Row 1 -->
+        <View android:layout_width="0dp" android:layout_height="0dp"
+            android:layout_row="0" android:layout_column="0" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnUp" android:layout_width="0dp" android:layout_height="0dp"
+            android:layout_row="0" android:layout_column="1" android:layout_columnWeight="1" android:layout_rowWeight="1"
+            android:contentDescription="Nahoru"
+            app:fabSize="normal" app:srcCompat="@android:drawable/arrow_up_float"/>
+        <View android:layout_width="0dp" android:layout_height="0dp"
+            android:layout_row="0" android:layout_column="2" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
+
+        <!-- Row 2 -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnLeft" android:layout_width="0dp" android:layout_height="0dp"
+            android:layout_row="1" android:layout_column="0" android:layout_columnWeight="1" android:layout_rowWeight="1"
+            android:contentDescription="Doleva"
+            app:fabSize="normal" app:srcCompat="@android:drawable/arrow_down_float"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnZoomIn" android:layout_width="0dp" android:layout_height="0dp"
+            android:layout_row="1" android:layout_column="1" android:layout_columnWeight="1" android:layout_rowWeight="1"
+            android:contentDescription="Zoom IN"
+            app:fabSize="mini" app:srcCompat="@android:drawable/ic_menu_zoom"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnRight" android:layout_width="0dp" android:layout_height="0dp"
+            android:layout_row="1" android:layout_column="2" android:layout_columnWeight="1" android:layout_rowWeight="1"
+            android:contentDescription="Doprava"
+            app:fabSize="normal" app:srcCompat="@android:drawable/arrow_up_float"
+            android:rotation="180"/>
+
+        <!-- Row 3 -->
+        <View android:layout_width="0dp" android:layout_height="0dp"
+            android:layout_row="2" android:layout_column="0" android:layout_columnWeight="1" android:layout_rowWeight="1"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnDown" android:layout_width="0dp" android:layout_height="0dp"
+            android:layout_row="2" android:layout_column="1" android:layout_columnWeight="1" android:layout_rowWeight="1"
+            android:contentDescription="Dolu"
+            app:fabSize="normal" app:srcCompat="@android:drawable/arrow_down_float"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnZoomOut" android:layout_width="0dp" android:layout_height="0dp"
+            android:layout_row="2" android:layout_column="2" android:layout_columnWeight="1" android:layout_rowWeight="1"
+            android:contentDescription="Zoom OUT"
+            app:fabSize="mini" app:srcCompat="@android:drawable/ic_menu_view"/>
+    </GridLayout>
+</FrameLayout>

@@ -1,0 +1,2 @@
+-keep class com.eyeplus.recon.** { *; }
+-keep class moe.shizuku.** { *; }

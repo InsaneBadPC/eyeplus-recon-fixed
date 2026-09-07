@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp" app:cardElevation="2dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="12dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Skryta nastaveni - Ginatex CGI dump" android:textStyle="bold" android:textSize="15sp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Prohledava skryte CGI endpointy a vypisuje konfiguracni parametry"
+                android:textSize="12sp" android:layout_marginTop="4dp"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginTop="8dp">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDumpAll" android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Dump all"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDumpCmd" android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Dump cmds"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnExportCgi" android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Export" style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Vysledky CGI -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" app:cardElevation="2dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:padding="8dp"
+                android:background="#1A1A1A">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="2" android:text="Endpoint"
+                    android:textStyle="bold" android:textSize="12sp"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Code"
+                    android:textStyle="bold" android:textSize="12sp"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Params"
+                    android:textStyle="bold" android:textSize="12sp"/>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCgiResults"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" android:layout_weight="1"
+                android:padding="8dp"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Sensitive data -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" app:cardElevation="2dp"
+        app:cardBackgroundColor="#2D0000">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="12dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Citlive udaje (hesla, klice)" android:textStyle="bold"
+                android:textColor="#F44336" android:textSize="14sp"/>
+            <TextView android:id="@+id/tvSensitive"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" android:text="--"
+                android:textSize="11sp" android:fontFamily="monospace"
+                android:textColor="#FFCDD2"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>
